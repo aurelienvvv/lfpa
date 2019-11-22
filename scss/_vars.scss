@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Oswald:400,600,700&display=swap");
+
+// fonts //
+
+$title-fonts: "Oswald", sans-serif;
+$default-fonts: "Open Sans", sans-serif;
+
+// colors //
+
+$dark-blue: #00263f;
+$white: white;
+$pop-blue: #09f7d1;
+$pop-green: #2fffb4;
+
+$primary-color: $white;
+$secondary-color: $dark-blue;
+
+$gradient-pop: linear-gradient(
+  90deg,
+  rgba(9, 247, 209, 1) 0%,
+  rgba(47, 255, 180, 1) 100%
+);
+
+$tablet: 768px;
+$standard: 1024px;
+
+// directories //
+
+$DIR-IMG: "../img";
+$DIR-IMG-FILM: "#{$DIR-IMG}/img-film";

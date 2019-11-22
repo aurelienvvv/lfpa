@@ -1,0 +1,27 @@
+@mixin underline-links {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background: $gradient-pop;
+    transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  &:hover {
+    color: $pop-green;
+
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+@mixin js-effect-fix {
+  position: relative;
+  z-index: 10;
+}

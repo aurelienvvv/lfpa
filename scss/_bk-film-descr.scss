@@ -1,0 +1,86 @@
+.infos-film-descr {
+  display: block;
+
+  @media (min-width: $tablet) {
+    display: flex;
+  }
+
+  .descr {
+    width: 100%;
+    padding: 30px;
+
+    @media (min-width: $tablet) {
+      padding: 50px;
+      width: 50%;
+    }
+
+    .synopsis-film {
+      margin: 0 auto;
+      max-width: 500px;
+
+      .synopsis-title {
+        font-weight: 700;
+        font-size: 25px;
+      }
+
+      p {
+        line-height: 30px;
+        margin-bottom: 30px;
+      }
+
+      .film-tags {
+        display: inline;
+        font-weight: 400;
+        font-family: $default-fonts;
+        font-size: 14px;
+
+        span {
+          border: 1px solid white;
+          padding: 3px 8px;
+          margin-left: 3px;
+
+          @media (min-width: $tablet) {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    &.films-others-infos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .film-note {
+        font-size: 75px;
+        font-family: $title-fonts;
+        text-align: center;
+
+        span {
+          font-size: 30px;
+
+          &:last-child {
+            display: block;
+            font-family: $default-fonts;
+            font-size: 13px;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .btn {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+.wrapper-video-film {
+  iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    margin-top: 30px;
+  }
+}

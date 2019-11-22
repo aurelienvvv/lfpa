@@ -1,0 +1,72 @@
+.bk-film-header {
+  position: relative;
+
+  .img-top-header {
+    object-fit: cover;
+    width: 100%;
+    height: 70vh;
+    display: block;
+
+    @media (min-width: $standard) {
+      height: 600px;
+    }
+  }
+}
+
+.infos-film-header {
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    flex-direction: row;
+  }
+
+  .film-header-bk {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: $gradient-pop;
+
+    @media (min-width: $tablet) {
+      width: 50%;
+    }
+
+    &.hours-infos {
+      background: black;
+    }
+
+    .film-header-title {
+      text-align: center;
+      padding: 10px;
+      margin: 0;
+      color: $dark-blue;
+      font-family: $default-fonts;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+
+      @media (min-width: $tablet) {
+        text-align: left;
+      }
+
+      &.hours {
+        color: white;
+      }
+
+      span {
+        display: block;
+
+        &.sub-title {
+          margin-top: 5px;
+          font-size: 14px;
+          text-transform: initial;
+        }
+      }
+    }
+  }
+}

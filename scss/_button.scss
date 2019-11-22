@@ -1,0 +1,61 @@
+.btn {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  padding: 8px 20px;
+  border: none;
+  background: transparent;
+  color: $pop-green;
+  font-family: $default-fonts;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: $pop-green solid 1px;
+  cursor: pointer;
+  transition: 0.5s;
+
+  span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    &:before {
+      content: $icon-ticket;
+      transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+      position: absolute;
+      top: 13px;
+      left: 19px;
+      color: $pop-green;
+    }
+
+    &:after {
+      content: $icon-ticket;
+      transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+      position: absolute;
+      top: 43px;
+      left: 19px;
+      color: $pop-green;
+      transform: scaleX(0.3);
+    }
+  }
+
+  &:hover {
+    border: $white 1px solid;
+    color: $white;
+
+    span {
+      &:before {
+        top: -43px;
+        transform: scaleX(0);
+        color: $white;
+      }
+
+      &:after {
+        top: 13px;
+        transform: scaleX(1);
+        color: $white;
+      }
+    }
+  }
+}

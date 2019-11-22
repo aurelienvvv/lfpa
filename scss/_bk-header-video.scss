@@ -1,0 +1,68 @@
+.bk-header-video {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    height: 100vh;
+    margin-top: -100px;
+  }
+
+  #myVideo {
+    opacity: 0;
+
+    @media (min-width: $tablet) {
+      position: absolute;
+      opacity: 1;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1000;
+    }
+  }
+
+  .img-header {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/img-film/Swiss-Army-Man-Szene-4.jpg");
+    background-position: center;
+    background-size: cover;
+
+    @media (min-width: $tablet) {
+      opacity: 0;
+    }
+  }
+
+  .filter-header {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: rgba(#000000, 0.7);
+  }
+
+  .wrapper-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+    text-align: center;
+    color: $pop-green;
+  }
+}

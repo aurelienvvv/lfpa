@@ -1,0 +1,57 @@
+.site-content {
+  max-width: 1200px;
+}
+
+// TEXT //
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.title-fonts {
+  font-family: $title-fonts;
+}
+
+.pop-green-color {
+  color: $pop-green;
+}
+
+.dark-blue-color {
+  color: $dark-blue;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.fz-18 {
+  font-size: 18px;
+}
+
+// BUTTON //
+
+.no-styled-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+// LIST //
+
+.no-styled-list {
+  list-style: none;
+}
+
+.z-i1 {
+  z-index: 1;
+}
+
+// MARGIN //
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}

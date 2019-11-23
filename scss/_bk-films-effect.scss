@@ -1,10 +1,4 @@
 .films {
-  header,
-  footer,
-  .bk-heading-title {
-    @include js-effect-fix;
-  }
-
   footer {
     background-color: $dark-blue;
   }
@@ -12,6 +6,7 @@
 
 .loading {
   position: relative;
+  z-index: -1;
 }
 
 .frame-films {

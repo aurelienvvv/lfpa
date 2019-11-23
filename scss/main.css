@@ -780,7 +780,7 @@ header .wrapper-header {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 40px;
-  z-index: 10;
+  z-index: 12;
 }
 
 @media (min-width: 768px) {
@@ -860,7 +860,7 @@ header .wrapper-header nav .nav-list {
   height: 100vh;
   background: #00263f;
   text-align: center;
-  z-index: 10;
+  z-index: 12;
   opacity: 1;
   -webkit-transition: left 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: left 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -2609,19 +2609,13 @@ footer .bottom-footer a:hover {
   text-align: center;
 }
 
-.films header,
-.films footer,
-.films .bk-heading-title {
-  position: relative;
-  z-index: 10;
-}
-
 .films footer {
   background-color: #00263f;
 }
 
 .loading {
   position: relative;
+  z-index: -1;
 }
 
 .frame-films {

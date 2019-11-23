@@ -1759,15 +1759,6 @@ footer .bottom-footer a:hover {
 }
 
 @media (min-width: 768px) {
-  .news-wrapper .bk-card-news:first-child {
-    margin-left: 50px;
-  }
-  .news-wrapper .bk-card-news:last-child {
-    margin-right: 50px;
-  }
-}
-
-@media (min-width: 768px) {
   .news-wrapper .bk-card-news {
     height: 300px;
   }
@@ -2615,7 +2606,6 @@ footer .bottom-footer a:hover {
 
 .loading {
   position: relative;
-  z-index: -1;
 }
 
 .frame-films {

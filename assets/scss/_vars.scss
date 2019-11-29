@@ -15,11 +15,7 @@ $pop-green: #2fffb4;
 $primary-color: $white;
 $secondary-color: $dark-blue;
 
-$gradient-pop: linear-gradient(
-  90deg,
-  rgba(9, 247, 209, 1) 0%,
-  rgba(47, 255, 180, 1) 100%
-);
+$gradient-pop: linear-gradient(90deg, rgba(9, 247, 209, 1) 0%, rgba(47, 255, 180, 1) 100%);
 
 $tablet: 768px;
 $standard: 1024px;

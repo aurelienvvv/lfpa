@@ -1,6 +1,10 @@
 header {
   background: $dark-blue;
 
+  // fix le bug de la page films qui survol notre header
+  position: relative;
+  z-index: 50;
+
   &.main-page {
     @media (min-width: $tablet) {
       background: transparent;

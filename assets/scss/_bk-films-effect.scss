@@ -145,25 +145,7 @@
   padding-bottom: calc(100% / (var(--aspect-ratio)));
   will-change: transform;
 }
-/* 
-exemple de boucle sass
-$map_films : (
-  1: (
-    "cover": "../img/..."
-  ),
-  2: (
-    "cover": "../img/..."
-  )
-);
 
-@each $index, $film in $map_films {
-  .item:nth-child(#{$index}) .item__img-wrap {
-    width: 1000px;
-    --aspect-ratio: 900/505;
-    --image: url(map-get(#{$film}, cover));
-  }
-}
- */
 .item:first-child .item__img-wrap {
   width: 1000px;
   --aspect-ratio: 1000/505;

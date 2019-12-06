@@ -5,6 +5,7 @@
   text-align: center;
   flex-direction: column;
   padding: 20px;
+  z-index: 10;
 
   &.-pop {
     background: $gradient-pop;

@@ -2303,6 +2303,7 @@ footer .bottom-footer a:hover {
 
 .bk-film-header {
   position: relative;
+  z-index: auto;
 }
 
 .bk-film-header .img-top-header {

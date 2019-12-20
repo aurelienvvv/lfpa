@@ -1,266 +1,99 @@
-.films {
-  footer {
-    background-color: $dark-blue;
-  }
-}
-
-.loading {
-  position: relative;
-}
-
-.frame-films {
-  height: 90px;
-}
-
-.js .loading {
-  &:before {
-    content: "";
-    position: fixed;
-    z-index: 100000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--color-bg);
-  }
-
-  &:after {
-    content: "";
-    position: fixed;
-    z-index: 100000;
-    top: 50%;
-    left: 50%;
-    width: 60px;
-    height: 60px;
-    margin: -30px 0 0 -30px;
-    pointer-events: none;
-    border-radius: 50%;
-    opacity: 0.4;
-    background: var(--color-link);
-    animation: loaderAnim 0.7s linear infinite alternate forwards;
-  }
-}
-
-@keyframes loaderAnim {
-  to {
-    opacity: 1;
-    transform: scale3d(0.5, 0.5, 1);
-  }
-}
-
-[data-scroll] {
-  will-change: transform;
-}
-
-.frame {
-  padding: 2.5rem 3rem;
-  position: absolute;
-  z-index: 10;
-}
-
-.frame__title {
-  font-size: 1rem;
-  margin: 0 0 2.5rem;
-}
-
-.frame__links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.frame a {
-  margin: 0.25rem 0;
-  text-transform: lowercase;
-}
-
-.frame__github,
-.frame__links a:not(:last-child),
-.frame__demos a:not(:last-child) {
-  margin-right: 1rem;
-}
-
-.frame__demos {
-  margin: 1rem 0;
-}
-
-.frame__demo--current,
-.frame__demo--current:hover {
-  color: var(--color-text);
-}
-
-.content {
+.films-wrapper {
   display: flex;
   flex-direction: column;
   position: relative;
-  align-items: center;
-  padding: 12rem 0;
-  counter-reset: figure;
-}
+  margin-top: 50px;
 
-.item {
-  margin: 10vh auto;
-  max-width: 100%;
-  position: relative;
-  will-change: transform;
+  .film {
+    position: relative;
+    max-width: 100%;
+    margin: 10vh auto;
+    display: block;
 
-  &.-left {
-    margin-left: 0;
-  }
+    &.-left {
+      margin-left: 0;
+    }
 
-  &.-right {
-    margin-right: 0;
+    &.-right {
+      margin-right: 0;
 
-    .item__caption-copy {
-      left: auto;
-      right: 10px;
+      .infos-wrapper {
+        .hour-film {
+          left: 10px;
+          right: auto;
 
-      @media (min-width: $tablet) {
-        left: 30px;
-        right: auto;
+          @media (min-width: 800px) {
+            right: 30px;
+            left: auto;
+          }
+        }
+        .title-film {
+          right: 10px;
+          left: auto;
+          top: -30px;
+          bottom: auto;
+
+          @media (min-width: 800px) {
+            left: 50px;
+            right: auto;
+            bottom: -35px;
+            top: auto;
+          }
+        }
       }
     }
 
-    .item__caption-title {
-      right: auto;
-      left: 10px;
+    .img-wrapper {
+      position: relative;
 
-      @media (min-width: $tablet) {
-        right: 30px;
-        left: auto;
+      .image-parallax {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+
+        @media (min-width: 800px) {
+          height: 500px;
+          width: 1000px;
+        }
       }
     }
-  }
-}
 
-.item:nth-child(even)::before {
-  right: 0;
-}
+    .infos-wrapper {
+      font-family: $title-fonts;
+      text-transform: uppercase;
 
-.item__img-wrap {
-  --aspect-ratio: 1/1.5;
-  overflow: hidden;
-  width: 500px;
-  margin: 0;
-  padding-bottom: calc(100% / (var(--aspect-ratio)));
-  will-change: transform;
-}
+      .hour-film {
+        font-size: 5rem;
+        position: absolute;
+        right: 10px;
+        bottom: -70px;
+        color: white;
+        text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
 
-.item:first-child .item__img-wrap {
-  width: 1000px;
-  --aspect-ratio: 1000/505;
-  --image: url("#{$DIR-IMG-FILM}/joker-cover-big.jpg");
-}
+        @media (min-width: 800px) {
+          font-size: 8rem;
+          left: 30px;
+        }
+      }
 
-.item:nth-child(2) .item__img-wrap {
-  width: 1000px;
-  --aspect-ratio: 900/505;
-  --image: url("#{$DIR-IMG-FILM}/joker-cover-big.jpg");
-}
+      .title-film {
+        position: absolute;
+        left: 10px;
+        top: -35px;
+        background: $gradient-pop;
+        color: $dark-blue;
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 0px 20px;
 
-.item:nth-child(3) .item__img-wrap {
-  width: 1000px;
-  --aspect-ratio: 900/505;
-  --image: url("#{$DIR-IMG-FILM}/no-country-for-old-men.jpg");
-}
-
-.item:nth-child(4) .item__img-wrap {
-  width: 1000px;
-  --aspect-ratio: 900/505;
-  --image: url("#{$DIR-IMG-FILM}/am-psycho.jpg");
-}
-
-.item:nth-child(5) .item__img-wrap {
-  width: 1000px;
-  --aspect-ratio: 900/505;
-  --image: url("#{$DIR-IMG-FILM}/am-psycho.jpg");
-}
-
-.item:nth-child(6) .item__img-wrap {
-  width: 1000px;
-  --aspect-ratio: 900/505;
-  --image: url("#{$DIR-IMG-FILM}/only-lovers-crop.jpg");
-}
-
-.item:nth-child(7) .item__img-wrap {
-  width: 1000px;
-  --aspect-ratio: 900/505;
-  --image: url("#{$DIR-IMG-FILM}/only-lovers-crop.jpg");
-}
-
-.item:nth-child(8) .item__img-wrap {
-  width: 1000px;
-  --aspect-ratio: 900/505;
-  --image: url("#{$DIR-IMG-FILM}/Swiss_Army_Man-crop.jpg");
-}
-
-.item:nth-child(9) .item__img-wrap {
-  width: 1000px;
-  --aspect-ratio: 900/505;
-  --image: url("#{$DIR-IMG-FILM}/tombeau-cover.jpg");
-}
-
-.item__img {
-  --overflow: 40px;
-  height: calc(100% + (2 * var(--overflow)));
-  top: calc(-1 * var(--overflow));
-  width: 100%;
-  position: absolute;
-  background-image: var(--image);
-  background-size: cover;
-  background-position: 50% 0%;
-  will-change: transform;
-}
-
-.item__img--t1 {
-  --overflow: 60px;
-}
-
-.item__img--t2 {
-  --overflow: 80px;
-}
-
-.item__img--t3 {
-  --overflow: 120px;
-}
-
-.item__caption {
-  width: 100%;
-  font-family: $title-fonts;
-  text-transform: uppercase;
-  padding: 2rem 1rem;
-}
-
-.item__caption-title {
-  position: absolute;
-  right: 20px;
-  display: inline-block;
-  font-size: 5rem;
-  bottom: 20px;
-  text-shadow: 1px 1px 20px rgba($color: #000000, $alpha: 0.5);
-  @media (min-width: $tablet) {
-    left: 30px;
-    bottom: -20px;
-    font-size: 8rem;
-  }
-}
-
-.item__caption-copy {
-  display: inline-block;
-  position: absolute;
-  top: -45px;
-  left: 10px;
-  padding: 0px 20px;
-  font-size: 1.5rem;
-  font-weight: 700;
-  background: $gradient-pop;
-  color: $dark-blue;
-
-  @media (min-width: $tablet) {
-    top: auto;
-    bottom: 0px;
-    right: 50px;
-    left: auto;
-    font-size: 2rem;
+        @media (min-width: 800px) {
+          font-size: 2rem;
+          right: 50px;
+          left: auto;
+          top: auto;
+          bottom: -35px;
+        }
+      }
+    }
   }
 }

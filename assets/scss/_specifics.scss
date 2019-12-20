@@ -5,6 +5,7 @@
   overflow: hidden;
 
   .big-title-home {
+    position: absolute;
     pointer-events: none;
     font-size: 200px;
     z-index: -1;
@@ -25,7 +26,6 @@
     }
   }
 }
-
 
 // PAGE ARTICLE //
 
@@ -72,14 +72,14 @@
       position: relative;
 
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         left: 0;
         width: 0;
         height: 1px;
         background: $pop-green;
-        transition: .5s;
+        transition: 0.5s;
       }
 
       &:hover {

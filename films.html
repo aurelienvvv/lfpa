@@ -64,84 +64,66 @@
         </p>
       </div>
     </div>
-
-    <div class="loading">
-      <main class="main-js-effect">
-        <div data-scroll>
-          <div class="frame-films"></div>
-          <div class="content">
-            <span class="title-similar-movie stroke-text-title day-films-title">Vendredi</span>
-            <a href="./film-joker.html" class="item -left">
-              <div class="item__img-wrap">
-                <div class="item__img item__img--t1"></div>
-              </div>
-              <div class="item__caption">
-                <h2 class="item__caption-title">19h</h2>
-                <p class="item__caption-copy">
-                  Joker
-                </p>
-              </div>
-            </a>
-            <a href="./film-no-country.html" class="item -right">
-              <div class="item__img-wrap">
-                <div class="item__img item__img--t1"></div>
-              </div>
-              <div class="item__caption">
-                <h2 class="item__caption-title">21h</h2>
-                <p class="item__caption-copy">
-                  no country for old men
-                </p>
-              </div>
-            </a>
-            <span class="title-similar-movie stroke-text-title day-films-title">Samedi</span>
-            <a href="./film-am-psycho.html" class="item -left">
-              <div class="item__img-wrap">
-                <div class="item__img item__img--t3"></div>
-              </div>
-              <div class="item__caption">
-                <h2 class="item__caption-title">19h</h2>
-                <p class="item__caption-copy">
-                  american psycho
-                </p>
-              </div>
-            </a>
-            <a href="./film-only-lovers.html" class="item -right">
-              <div class="item__img-wrap">
-                <div class="item__img item__img--t1"></div>
-              </div>
-              <div class="item__caption">
-                <h2 class="item__caption-title">22h</h2>
-                <p class="item__caption-copy">
-                  only lovers left alive
-                </p>
-              </div>
-            </a>
-            <span class="title-similar-movie stroke-text-title day-films-title">Dimanche</span>
-            <a href="./film-swiss-army.html" class="item -left">
-              <div class="item__img-wrap">
-                <div class="item__img item__img--t2"></div>
-              </div>
-              <div class="item__caption">
-                <h2 class="item__caption-title">19h</h2>
-                <p class="item__caption-copy">
-                  swiss army man
-                </p>
-              </div>
-            </a>
-            <a href="./film-tombeau.html" class="item -right">
-              <div class="item__img-wrap">
-                <div class="item__img item__img--t3"></div>
-              </div>
-              <div class="item__caption">
-                <h2 class="item__caption-title">21h</h2>
-                <p class="item__caption-copy">
-                  le tombeau des lucioles
-                </p>
-              </div>
-            </a>
-          </div>
+    <div class="films-wrapper">
+      <span class="title-similar-movie stroke-text-title day-films-title">Vendredi</span>
+      <a href="film-joker.html" class="film -left">
+        <div class="img-wrapper">
+          <img src="./assets/img/img-film/joker-cover-big.jpg" class="image-parallax" alt="" />
         </div>
-      </main>
+        <div class="infos-wrapper">
+          <h2 class="hour-film">19h</h2>
+          <h2 class="title-film">Joker</h2>
+        </div>
+      </a>
+      <a href="film-only-lovers.html" class="film -right">
+        <div class="img-wrapper">
+          <img src="./assets/img/img-film/no-country-for-old-men.jpg" class="image-parallax" alt="" />
+        </div>
+        <div class="infos-wrapper">
+          <h2 class="hour-film">21h</h2>
+          <h2 class="title-film">No country for old men</h2>
+        </div>
+      </a>
+      <span class="title-similar-movie stroke-text-title day-films-title">Samedi</span>
+
+      <a href="film-am-psycho.html" class="film -left">
+        <div class="img-wrapper">
+          <img src="./assets/img/img-film/am-psycho.jpg" class="image-parallax" alt="" />
+        </div>
+        <div class="infos-wrapper">
+          <h2 class="hour-film">19H</h2>
+          <h2 class="title-film">American Psycho</h2>
+        </div>
+      </a>
+      <a href="film-only-lovers.html" class="film -right">
+        <div class="img-wrapper">
+          <img src="./assets/img/img-film/only-lovers.jpg" class="image-parallax" alt="" />
+        </div>
+        <div class="infos-wrapper">
+          <h2 class="hour-film">22h</h2>
+          <h2 class="title-film">Only lovers left alive</h2>
+        </div>
+      </a>
+      <span class="title-similar-movie stroke-text-title day-films-title">Dimanche</span>
+
+      <a href="film-swiss-army.html" class="film -left">
+        <div class="img-wrapper">
+          <img src="./assets/img/img-film/Swiss_Army_Man.jpg" class="image-parallax" alt="" />
+        </div>
+        <div class="infos-wrapper">
+          <h2 class="hour-film">19H</h2>
+          <h2 class="title-film">Swiss Army Man</h2>
+        </div>
+      </a>
+      <a href="film-tombeau.html" class="film -right">
+        <div class="img-wrapper">
+          <img src="./assets/img/img-film/tombeau.jpg" class="image-parallax" alt="" />
+        </div>
+        <div class="infos-wrapper">
+          <h2 class="hour-film">21h</h2>
+          <h2 class="title-film">Le Tombeau des lucioles</h2>
+        </div>
+      </a>
     </div>
 
     <!-- ////// -->
@@ -275,6 +257,7 @@
     <script src="./assets/js/slick.min.js"></script>
     <script src="./assets/js/bk-films-wrapper.js"></script>
     <script src="./assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/js/simpleParallax.min.js"></script>
     <script src="./assets/js/films-effect.js"></script>
   </body>
 </html>
